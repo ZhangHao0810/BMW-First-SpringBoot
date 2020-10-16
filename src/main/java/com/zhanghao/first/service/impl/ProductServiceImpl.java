@@ -26,7 +26,7 @@ public class ProductServiceImpl implements ProductService {
     public Product findByProductId(Integer productId) {
         Assert.notNull(productId, "productId is null!");
         Product record = new Product();
-        record.setProductId(productId);
+        record.setProductId(Long.valueOf(productId));
         List<Product> list = productDao.list(record);
         if (! CollectionUtils.isEmpty(list)) {
             return list.get(0);
