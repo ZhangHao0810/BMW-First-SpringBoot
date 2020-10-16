@@ -1,30 +1,69 @@
 package com.zhanghao.first.dao;
 
 import java.util.List;
+import com.zhanghao.first.model.Product;
+import com.zhanghao.first.util.*;
 
-import org.springframework.data.repository.query.Param;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
-import com.zhanghao.first.model.Product;
+/**
+ * 
+ * Product数据库操作接口类
+ * 
+ **/
 
-@Repository //采用这个注解来声明dao
+@Repository
 public interface ProductDao{
-    /**
-     * 
-     * 查询（根据主键ID查询）
-     * 
-     **/
-    Product  selectByPrimaryKey ( @Param("id") Long id );
-    /**
-     * 
-     * 添加
-     * 
-     **/
-    int insert( Product record );
-        /**
-     * 
-     * list查询
-     * 
-     **/
-    List<Product> list ( Product record);
+
+
+	/**
+	 * 
+	 * 查询（根据主键ID查询）
+	 * 
+	 **/
+	Product  selectByPrimaryKey ( @Param("id") Long id );
+
+	/**
+	 * 
+	 * 删除（根据主键ID删除）
+	 * 
+	 **/
+	int deleteByPrimaryKey ( @Param("id") Long id );
+
+	/**
+	 * 
+	 * 添加
+	 * 
+	 **/
+	int insert( Product record );
+
+	/**
+	 * 
+	 * 修改 （匹配有值的字段）
+	 * 
+	 **/
+	int updateByPrimaryKeySelective( Product record );
+
+	/**
+	 * 
+	 * list分页查询
+	 * 
+	 **/
+	List<Product> list4Page (@Param("record") Product record, @Param("commonQueryParam") CommonQueryBean query);
+
+	/**
+	 * 
+	 * count查询
+	 * 
+	 **/
+	long count ( Product record);
+
+	/**
+	 * 
+	 * list查询
+	 * 
+	 **/
+	List<Product> list ( Product record);
+
 }
