@@ -1,5 +1,6 @@
 package com.zhanghao.first.test;
 
+import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 
@@ -32,8 +33,8 @@ public class ProductTest {
         product1.setCreateTime(new Date());
         product1.setDesc("本商品使用起来体验非常好");
         product1.setName("电吹风");
-        product1.setPrice(1100);
-        product1.setProductId(1000111);
+        product1.setPrice(new BigDecimal(1100));
+        product1.setProductId(1000111L);
         product1.setState(1);
         productDao.insert(product1);
         //保存成功会把自增主键id返回回来
@@ -42,8 +43,8 @@ public class ProductTest {
         product2.setCreateTime(new Date());
         product2.setDesc("本洗衣机带烘干功能");
         product2.setName("洗衣机");
-        product2.setPrice(1100);
-        product2.setProductId(1000222);
+        product2.setPrice(new BigDecimal(1100));
+        product2.setProductId(1000222L);
         product2.setState(1);
         productDao.insert(product2);
         //保存成功会把自增主键id返回回来
