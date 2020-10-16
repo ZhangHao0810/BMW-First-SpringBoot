@@ -64,16 +64,19 @@
 			select LAST_INSERT_ID()
 		</selectKey>
 	</insert>
-	<select id="list" resultMap="Product">
-		SELECT
-		<include refid="Base_Column_List" />
-		from product
-		where 1=1
-		<if test="price != null">
-			and price = #{price}
-		</if>
-		<if test="state != null">
-			and state = #{state}
-		</if>
-	</select>
+        <select id="list" resultMap="Product">
+             SELECT 
+             <include refid="Base_Column_List" />
+             from product
+              where 1=1
+            <if test="price != null">
+                 and price = #{price} 
+            </if>
+            <if test="state != null">
+                 and state = #{state} 
+            </if>
+            <if test="productId != null">
+                 and product_id = #{productId} 
+            </if>
+        </select>
 </mapper>
