@@ -8,6 +8,11 @@ spring:
     username: root
     password: '0206'
     driver-class-name: com.mysql.cj.jdbc.Driver
+    
+  mvc:
+    view:
+      prefix: /WEB-INF/view/
+      suffix: .jsp
 mybatis:
   mapper-locations: classpath:mapping/*.xml
   type-aliases-package: com.zhanghao.first.model
