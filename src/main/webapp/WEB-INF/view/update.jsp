@@ -10,7 +10,8 @@
 <body>
 <div>
 <form action="${ctx}/productview/updateProduct" method="post">
-修改商品信息<input type="hidden" name="id" id="id" value="${product.id}"/><br/>
+修改商品信息
+<input type="hidden" name="id" id="id" value="${product.id}"/><br/>
 <table width="98%" align="center" border="0" cellspacing="0" cellpadding="0">
 	<tr>	
 		<td class="field">商品名称:</td>		

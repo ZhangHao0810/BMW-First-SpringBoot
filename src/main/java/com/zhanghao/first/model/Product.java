@@ -1,7 +1,11 @@
 package com.zhanghao.first.model;
 
 import java.math.BigDecimal;
+import java.text.SimpleDateFormat;
 import java.util.Date;
+
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 public class Product{
 
@@ -12,7 +16,7 @@ public class Product{
 
 
   /**商品名称**/
-
+@NotEmpty(message = "name 不能为空。")
   private String name;
 
 
@@ -41,7 +45,7 @@ public class Product{
 
 
   /**商品唯一标识**/
-
+@NotNull(message = "ProductId 不能为空。")
   private Long productId;
   
 
@@ -110,6 +114,12 @@ public BigDecimal getPrice() {     return this.price;
 
 
   public Date getCreateTime() {     return this.createTime;
+  }
+  
+  public String getCreateTimeString() {
+	  if (this.createTime == null) return "";
+	  SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+	  return  simpleDateFormat.format(createTime);
   }
 
 

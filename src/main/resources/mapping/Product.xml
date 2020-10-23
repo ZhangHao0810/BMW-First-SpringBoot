@@ -27,7 +27,6 @@
 		update_time,
 		`desc`,
 		product_id,
-		product_id,
         start_show_time,
         img_url
 	</sql>
@@ -71,7 +70,7 @@
 			 #{updateTime},
 			 #{desc},
 		     #{productId},
-             #{startShowTime}
+             #{startShowTime},
              #{imgUrl}
  		) 
 		 <selectKey keyProperty="id" resultType="Long" order="AFTER">

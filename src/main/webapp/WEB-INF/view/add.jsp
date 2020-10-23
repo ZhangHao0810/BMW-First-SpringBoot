@@ -9,6 +9,9 @@
 </head>
 <body>
 <div>
+${result}
+<!-- 用 c:if  接收服务器传的信息。 可以用作提交之后 显示Controller层的校验。controller再返回这个页面，带上校验信息。 -->
+<c:if test="${result !=null }"> <font color="red">字段不合法</font></br></c:if>
 <form action="${ctx}/productview/addProduct" method="post">
 添加新的商品信息<br/>
 <table width="98%" align="center" border="0" cellspacing="0" cellpadding="0">

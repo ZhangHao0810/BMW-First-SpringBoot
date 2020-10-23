@@ -15,7 +15,7 @@
 			<td>商品名称：<input type="text" name="name" id="name" value="${name}"/></td>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;
 			<input type="submit" name="sbtBtn" id="sbtBtn" value="查询"/>&nbsp;&nbsp;&nbsp;&nbsp;
-			<a href="${ctx}/product/add">新建商品</a>
+			<a href="${ctx}/productview/add">新建商品</a>
 			</td>
 		</tr>
 	</table>	
@@ -40,7 +40,7 @@
 			<td>
 			<a href="${ctx}/productview/getProduct?id=${item.id}">查看详情</a>&nbsp;&nbsp;
 			<a href="${ctx}/productview/update?id=${item.id}">更新商品</a>&nbsp;&nbsp;
-			<a href="${ctx}/productview/delete?id=${item.id}">删除商品</a>
+			<a href="${ctx}/productview/deleteProduct?id=${item.id}">删除商品</a>
 			</td>
 		</tr>	
 		</c:forEach>
