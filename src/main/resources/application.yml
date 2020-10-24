@@ -16,3 +16,11 @@ spring:
 mybatis:
   mapper-locations: classpath:mapping/*.xml
   type-aliases-package: com.zhanghao.first.model
+
+http:
+    maxTotal: 300
+    defaultMaxPerRoute: 50
+    connectTimeout: 1000
+    connectionRequestTimeout: 500
+    socketTimeout: 5000
+    staleConnectionCheckEnabled: true
