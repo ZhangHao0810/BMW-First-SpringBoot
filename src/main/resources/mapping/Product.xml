@@ -227,4 +227,9 @@
             and img_url = #{imgUrl} 
         </if>
 	</select>
+	
+	<select id="listByOrderNo"  resultMap="Product">
+    	select p.* from product p, `order` o where p.product_id= o.product_id
+    	and o.order_no=#{orderNo}
+    </select>
 </mapper>

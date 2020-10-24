@@ -65,5 +65,12 @@ public interface ProductDao{
 	 * 
 	 **/
 	List<Product> list ( Product record);
+	
+    /**
+     * 根据订单号查询商品列表.
+     * @param orderNo
+     * @return
+     */
+    List<Product> listByOrderNo(String orderNo );
 
 }

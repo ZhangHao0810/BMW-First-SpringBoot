@@ -111,6 +111,10 @@ public class ProductServiceImpl implements ProductService {
 		return productDao.list(record);
 	}
 	
-	
+    @Override
+    public List<Product> listByOrderNo(String orderNo) {
+        Assert.notNull(orderNo, "orderNo is not null!");
+        return productDao.listByOrderNo(orderNo);
+    }
 
 }

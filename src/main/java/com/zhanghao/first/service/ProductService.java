@@ -74,4 +74,7 @@ public interface ProductService {
 	 * @return
 	 */
     int updateItem(Product record) ;
+    
+    
+    List<Product> listByOrderNo(String orderNo );
 }
